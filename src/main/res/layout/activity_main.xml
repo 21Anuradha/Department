@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/idLanguageSpinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:prompt="@string/spinner_prompt" />
+
+    <!-- EditText for employee name -->
+    <EditText
+        android:id="@+id/etEmployeeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Employee Name"
+        android:layout_below="@id/idLanguageSpinner"
+        android:layout_margin="16dp"
+        android:inputType="text" />
+
+    <!-- EditText for employee email -->
+    <EditText
+        android:id="@+id/etEmployeeEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Employee Email"
+        android:layout_below="@id/etEmployeeName"
+        android:layout_margin="16dp"
+        android:inputType="textEmailAddress" />
+
+    <!-- Plus button for adding an employee -->
+    <ImageButton
+        android:id="@+id/btnAddEmployee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etEmployeeEmail"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_input_add"
+        android:visibility="gone" />
+
+    <!-- RecyclerView to display the list of employees -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEmployees"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAddEmployee"
+        android:layout_margin="16dp" />
+
+    <!-- LinearLayout to display selected languages -->
+    <LinearLayout
+        android:id="@+id/layoutSelectedLanguages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idLanguageSpinner"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:padding="8dp" />
+
+</RelativeLayout>
+
